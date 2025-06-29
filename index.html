@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MIDI Player - 128 Keys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>MIDI Player - 128 Keys (C-1 to G9)</h1>
+  <div id="controls">
+    <input type="file" id="midiFile" accept=".mid,.midi">
+    <button id="playBtn">Play</button>
+    <button id="pauseBtn">Pause</button>
+    <button id="stopBtn">Stop</button>
+    <input type="range" id="seekBar" min="0" max="100" value="0" step="1">
+    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+  </div>
+  <div id="keyboard"></div>
+  <div id="tracksLegend"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.27/build/Midi.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
